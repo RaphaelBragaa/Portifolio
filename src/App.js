@@ -1,6 +1,7 @@
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import About from "./Components/About/About";
+import Tecnololgies from "./Components/Tecnologies/Tecnologies";
 import GlobalStyle from "./Assets/Styles/GlobalStyle";
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
         <Header/>
         <Main/>
         <About/>
+        <Tecnololgies/>
     </div>
   );
 }

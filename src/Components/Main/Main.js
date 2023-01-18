@@ -9,7 +9,7 @@ export default function Main(){
         <Home background2={background}>
              <h1>
                 Olá, meu nome é
-                <strong> Raphael Braga </strong>
+                <strong> Raphael Braga, </strong>
                  desenvolvedor Web FullStack
                 <Cursor/>
             </h1> 
@@ -40,7 +40,7 @@ const Cursor = styled.span`
   }
 `;
 const Home = styled.div`
-    height:50rem;
+    height:30rem;
     
   background-image:
   linear-gradient(to bottom, rgba(2,0,36, 1), rgba(128,13,109, 0.53),rgba(229,0,255,0.60)),
