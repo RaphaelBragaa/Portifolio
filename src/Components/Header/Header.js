@@ -16,40 +16,55 @@ export default function Header(){
 }
 
 const Main=styled.div`
-    width:100%;
-    height:4rem;
+width:100%;
+height:4rem;
+display:flex;
+align-items:center;
+justify-content:space-around;
+background-color:black;
+   h1{
+    font-family: 'B612 Mono', monospace;
+    font-weight:700;
+    color: white;
+    font-size:1.5rem;
+   }
+   strong{
+    color: #b21abd;
+    font-size:1.6rem;
+    font-weight:800;
+   }
+   div{
+    width:40%;
     display:flex;
-    align-items:center;
-    justify-content:space-around;
-    
+    justify-content: space-around;
 
-    background-color:black;
-       h1{
-        font-family: 'B612 Mono', monospace;
-        font-weight:700;
-        color: white;
-        font-size:1.5rem;
-       }
-       strong{
-        color: #b21abd;
-        font-size:1.6rem;
-        font-weight:800;
-       }
-       div{
-        width:40%;
-        display:flex;
-        justify-content: space-around;
+    h2:hover{
+        text-decoration: underline #b21abd 5px;
+        font-weight:500;
+    }
+   }
+   h2{
+    font-family: 'B612 Mono', monospace;
+    font-weight:400;
+    color: white;
+    font-size:1.5rem;
+   }
 
-        h2:hover{
-            text-decoration: underline #b21abd 5px;
-            font-weight:500;
+@media (max-width:768px){
+    flex-direction:column;
+    height:auto;
+    h1{
+        font-size:1.2rem;
+        margin-top:1rem;
+    }
+    strong{
+        font-size:1.2rem;
+    }
+    div{
+        width:100%;
+        margin-top:1rem;
+        h2{
+            font-size:1.2rem;
         }
-       }
-       h2{
-        font-family: 'B612 Mono', monospace;
-        font-weight:400;
-        color: white;
-        font-size:1.5rem;
-       }
-        
-`
+    }
+}`

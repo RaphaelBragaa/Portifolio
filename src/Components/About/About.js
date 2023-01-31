@@ -7,7 +7,7 @@ export default function About(){
             <Sobre>
             <Title>Quem sou eu?</Title>
             <Container>
-                <Photo rafa={rafa}/>
+                <img src={rafa}/>
                 <Description>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
@@ -24,28 +24,61 @@ export default function About(){
 
 const Sobre = styled.div`
     width:100%;
-    height:50rem;
-    background-color: black;
+    height:40rem;
+    background-color: #343541;
+
+    @media (max-width: 767px) {
+        height: auto;
+    }
 `
+
 const Title = styled.h1`
- font-family: 'B612 Mono', monospace;
- font-weight:800;
- color: #FFFFFF;
- font-size: 5rem;
- text-align:center;
+    font-family: 'B612 Mono', monospace;
+    font-weight:800;
+    color: #FFFFFF;
+    font-size: 5rem;
+    text-align:center;
+
+    @media (max-width: 767px) {
+        font-size: 2.5rem;
+    }
 `
+
 const Container = styled.div`
     display:flex;
-    justify-content:start;
+    justify-content:center;
+    margin-top:40px;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img{
+        border-radius:15px;
+        width:20rem;
+        height:20rem;
+        border: 5px solid #b21abd;
+
+        @media (max-width: 767px) {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
 `
 
 const Description = styled.h2`
-color: #FFFFFF;
-width: 50%;
-text-align:left;
-margin-top:20px;
+    color: #FFFFFF;
+    width: 30%;
+    text-align:left;
+    margin-left:20px;
+    font-family: 'B612 Mono', monospace;
+    font-size: 1.5rem;
+
+    @media (max-width: 767px) {
+        width: 80%;
+        text-align: center;
+        margin: 0;
+    }
 `
-const Photo = styled.div`
-    height:20rem;
-    background-image:url(${(props)=>props.rafa});
-`
+

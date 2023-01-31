@@ -67,6 +67,11 @@ const Home = styled.div`
         font-weight:800;
     }
   }
+  @media (max-width: 767px) { 
+     height: 40rem; 
+        h1 { width: 70%; 
+             font-size: 2rem; 
+        strong { font-size: 2.5rem; } } } 
   
 `
 

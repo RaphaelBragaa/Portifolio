@@ -1,0 +1,156 @@
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { GrReactjs } from "react-icons/gr"
+import { ImEarth } from "react-icons/im"
+import { BsGithub } from "react-icons/bs"
+
+export default function Projects({ images, descriptions }) {
+const [selectedImage, setSelectedImage] = useState(null);
+
+const handleImageClick = (index) => {
+setSelectedImage(index);
+};
+
+const closeModal = () => {
+setSelectedImage(null);
+};
+
+return (
+    <>
+    <Title>PROJETOS</Title>
+        <GalleryContainer>
+            {images.map((image, index) => (
+            <ImageContainer key={index} onClick={() => handleImageClick(index)}>
+            <img src={image} />
+            </ImageContainer>
+            ))}
+        </GalleryContainer>
+        {selectedImage !== null && (
+        <ModalContainer onClick={closeModal}>
+        <div className="modal-content">
+        <div className="left-side">
+        <h3>Image Description</h3>
+        <p>{descriptions[selectedImage]}</p>
+        <h3>Tecnologias</h3>
+        <span>
+            <GrReactjs fontSize={'2.5rem'}/>
+            <GrReactjs fontSize={'2.5rem'}/>
+        </span>
+        <h3>Links</h3>
+        <span>
+            <ImEarth fontSize={'2.5rem'}/>
+            <BsGithub fontSize={'2.5rem'}/>
+        </span>
+        </div>
+        <div className="right-side">
+        <img src={images[selectedImage]} />
+        
+        </div>
+        </div>
+        </ModalContainer>
+        )}
+    </>
+);
+};
+
+const Title = styled.h1`
+    font-family: 'B612 Mono', monospace;
+    font-weight:800;
+    color: #FFFFFF;
+    font-size: 5rem;
+    text-align:center;
+    background-color: #343541;
+
+    @media (max-width: 767px) {
+        font-size: 2.5rem;
+    }
+`
+const GalleryContainer = styled.div`
+ display: flex; 
+ flex-wrap: wrap; 
+ justify-content: space-between; 
+ padding: 10px;
+ background-color: #343541;
+ `
+ 
+
+const ImageContainer = styled.div`
+width: 30%;
+height: 300px;
+overflow: hidden;
+margin-bottom: 20px;
+border-radius: 10px;
+cursor: pointer;
+
+img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+`;
+
+const ModalContainer = styled.div`
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.7);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1;
+color: #FFFFFF;
+font-family: 'B612 Mono', monospace;
+.modal-content {
+
+width: 60%;
+height: 80%;
+display: flex;
+justify-content: space-between;
+padding: 20px;
+border-radius: 20px;
+.left-side {
+  width: 50%;
+  padding-right: 20px;
+  background-color:#b21abd;
+  padding-left:30px;
+  padding-top: 15px;
+  box-shadow:30px;
+  
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight:700;
+    text-align:color-interpolation-filters;
+  }
+  
+  p {
+    font-size: 1.8rem;
+    margin-bottom:10px;
+  }
+  span{
+    width:20%;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+  }
+}
+
+.right-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #343541;
+  img {
+    width: 70%;
+    height: 40%;
+    object-fit: cover;
+  }
+}
+}
+`;
+
