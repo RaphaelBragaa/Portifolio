@@ -4,8 +4,8 @@ import rafa from "../../Assets/Images/rafa.jpg"
 export default function About(){
     return(
         <>
-            <Sobre>
-            <Title>Quem sou eu?</Title>
+        <Sobre>
+          <Title>Sobre mim</Title>
             <Container>
                 <img src={rafa}/>
                 <Description>
@@ -16,7 +16,7 @@ export default function About(){
                 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
                 and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </Description> 
-            </Container>
+          </Container>
         </Sobre>
         </>
     )
@@ -45,6 +45,7 @@ const Title = styled.h1`
 `
 
 const Container = styled.div`
+    height:20rem;
     display:flex;
     justify-content:center;
     margin-top:40px;

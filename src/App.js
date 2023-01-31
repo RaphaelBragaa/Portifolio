@@ -2,6 +2,7 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import About from "./Components/About/About";
 import Projects from "./Components/Projects/Projects";
+import Tecnologies from "./Components/Tecnologies/Tecnologies"
 import GlobalStyle from "./Assets/Styles/GlobalStyle";
 import image from "./Assets/Images/rafa.jpg"
 
@@ -22,7 +23,9 @@ export default function App() {
         <Header/>
         <Main/>
         <About/>
+        <Tecnologies/>
         <Projects images={images} descriptions={description}/>
+        
     </div>
   );
 }
