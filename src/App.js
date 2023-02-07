@@ -5,6 +5,7 @@ import Projects from "./Components/Projects/Projects";
 import Tecnologies from "./Components/Tecnologies/Tecnologies"
 import GlobalStyle from "./Assets/Styles/GlobalStyle";
 import image from "./Assets/Images/rafa.jpg"
+import Contact from "./Components/Contact/Contact";
 
 export default function App() {
   const images = [image, image, image, image, image,image]
@@ -25,6 +26,7 @@ export default function App() {
         <About/>
         <Tecnologies/>
         <Projects images={images} descriptions={description}/>
+        <Contact/>
         
     </div>
   );

@@ -13,6 +13,7 @@ import prisma from "../../Assets/Images/prisma-3.svg"
 
 
 
+
 export default function Tecnololgies() {
 
     const DataCards = [
@@ -29,9 +30,11 @@ export default function Tecnololgies() {
 
 
     ]
+
+
     return(
         <Tec>
-            <Title>Tecnologias</Title>
+            <Title>Tecnologias & Ferramentas</Title>
         <Deck>
             {DataCards.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color}/>)})}
         </Deck>
@@ -41,26 +44,32 @@ export default function Tecnololgies() {
 
 const Tec = styled.div`
     width:100%;
-    height:40rem;
+    height:60rem;
     background-color: #343541;
-   
+    
 `
 const Title = styled.h1`
+width:30%;
  font-family: 'B612 Mono', monospace;
  font-weight:800;
- color:#b21abd;
- font-size: 5rem;
+ color:white;
+ font-size: 2.5rem;
  text-align:center;
  padding-top:20px;
+ margin:auto;
  margin-bottom: 30px;
 `
 
 const Deck = styled.div`
     display: flex;
-    padding:10px;
+    margin:auto;
+
+    width:50%;
     flex-wrap:wrap;
     justify-content:space-around;
-    min-height: 30rem;
+    align-items:center;
+   
+    min-height: 40rem;
     background-color: #343541;
 `
 

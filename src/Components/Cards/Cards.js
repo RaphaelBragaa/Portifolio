@@ -13,7 +13,7 @@ export default function Cards({tec, tittle,color}) {
 }
 
 const Card = styled.div`
-  background:white ;
+  background:#FF4495 ;
   border-radius: 10px;
   margin-bottom:20px;
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);

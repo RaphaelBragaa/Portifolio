@@ -13,7 +13,7 @@ export default function Main(){
                  desenvolvedor Web FullStack
                 <Cursor/>
             </h1> 
-            
+        
         </Home>
         </>
     )
@@ -40,7 +40,7 @@ const Cursor = styled.span`
   }
 `;
 const Home = styled.div`
-    height:30rem;
+    height:50rem;
     
   background-image:
   linear-gradient(to bottom, rgba(2,0,36, 1), rgba(128,13,109, 0.53),rgba(229,0,255,0.60)),
