@@ -44,6 +44,10 @@ const Card = styled.div`
     margin-top:50px;
   }
   
+  @media (max-width: 800px) {
+        height: 150px;
+        width: 150px;
+    }
 `;
 
   const Logo = styled.img`
@@ -52,4 +56,9 @@ const Card = styled.div`
         border-radius:15px;
         margin-right:10px;
   
+    @media (max-width: 800px) {
+        width: 3rem;
+        height: 3rem;
+    }
   `
+

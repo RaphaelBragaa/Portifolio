@@ -55,63 +55,69 @@ export default function Forms(){
             onChange={(event) => setMensagem(event.target.value)}
           />
         </div>
-        <button type="submit">Enviar Mensagem</button>
+        <button type="submit">Enviar</button>
       </form>
       </ContainerForm>
     )
 }
 const ContainerForm = styled.div`
-    height:40rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    h1{
-        font-size: 2rem;
-        color:white;
-        font-weight:600;
-        margin-bottom:5px;
-    }
-    h2{
-        font-size: 1rem;
-        color:white;
-        font-weight:400;
-        color:#FF4495;
-        margin-bottom:5px;
-    }
-    form{
-    
-        width:35%;
-        height:20rem;
-        align-items:center;
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
-        div{
-            width:100%;
-            
-            text-align:center;
-            margin:auto;
-        }
-        input {
-            border-radius:5px;
-            border:none;
-            width:50%;
-            height:2.5rem;
-            padding-left:10px;
-        }
-        textarea{
-            border-radius:5px;
-            border:none;
-            width:50%;
-            height:4.5rem;
-            padding-left:10px;
-            padding-top:5px;
-        }
-        button{
-            margin:auto;
-        }
-    }
-    
+  width:50%;
+  height:40rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
 
+  h1 {
+    font-size: 2rem;
+    color:white;
+    font-weight:600;
+    margin-bottom:5px;
+  }
+  h2 {
+    font-size: 1rem;
+    color:white;
+    font-weight:400;
+    color:#FF4495;
+    margin-bottom:5px;
+  }
+  form {
+    width:35%;
+    height:20rem;
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    div {
+      width:100%;
+      text-align:center;
+      margin:auto;
+    }
+    input {
+      border-radius:5px;
+      border:none;
+      width:100%;
+      height:2.5rem;
+      padding-left:10px;
+    }
+    textarea {
+      border-radius:5px;
+      border:none;
+      width:100%;
+      height:4.5rem;
+      padding-left:10px;
+      padding-top:5px;
+    }
+    button {
+      margin:auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width:90%;
+    height:auto;
+    form {
+      width:80%;
+    }
+  }
 `

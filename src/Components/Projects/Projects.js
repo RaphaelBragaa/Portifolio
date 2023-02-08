@@ -65,13 +65,18 @@ const Title = styled.h1`
         font-size: 2.5rem;
     }
 `
+
 const GalleryContainer = styled.div`
  display: flex; 
  flex-wrap: wrap; 
  justify-content: space-between; 
- padding: 10px;
+ padding: 10rem;
  background-color: #343541;
- `
+
+ @media (max-width: 767px) {
+    padding: 5rem;
+ }
+`
  
 
 const ImageContainer = styled.div`
@@ -81,6 +86,12 @@ overflow: hidden;
 margin-bottom: 20px;
 border-radius: 10px;
 cursor: pointer;
+
+@media (max-width: 767px) {
+  height: 150px;
+        width: 150px;
+    overflow: hidden;
+}
 
 img {
 width: 100%;
@@ -110,6 +121,13 @@ display: flex;
 justify-content: space-between;
 padding: 20px;
 border-radius: 20px;
+
+@media (max-width: 767px) {
+    width: 80%;
+    height: 60%;
+    padding: 10px;
+}
+
 .left-side {
   width: 50%;
   padding-right: 20px;
@@ -153,4 +171,5 @@ border-radius: 20px;
 }
 }
 `;
+
 

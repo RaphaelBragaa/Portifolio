@@ -46,7 +46,8 @@ const Tec = styled.div`
     width:100%;
     height:60rem;
     background-color: #343541;
-    
+
+  
 `
 const Title = styled.h1`
 width:30%;
@@ -58,18 +59,22 @@ width:30%;
  padding-top:20px;
  margin:auto;
  margin-bottom: 30px;
+
+ 
 `
 
 const Deck = styled.div`
     display: flex;
     margin:auto;
-
     width:50%;
     flex-wrap:wrap;
     justify-content:space-around;
     align-items:center;
-   
     min-height: 40rem;
     background-color: #343541;
+
+    @media (max-width: 800px) {
+        width: 80%;
+    }
 `
 
