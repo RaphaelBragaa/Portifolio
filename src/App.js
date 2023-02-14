@@ -23,7 +23,7 @@ export default function App() {
       <GlobalStyle/>
         <Header/>
         <Main/>
-        <About/>
+         <About/> 
         <Tecnologies/>
         <Projects images={images} descriptions={description}/>
         <Contact/>

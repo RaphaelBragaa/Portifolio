@@ -61,7 +61,7 @@ export default function Forms(){
     )
 }
 const ContainerForm = styled.div`
-  width:50%;
+  width:30%;
   height:40rem;
   display:flex;
   align-items:center;
@@ -82,7 +82,7 @@ const ContainerForm = styled.div`
     margin-bottom:5px;
   }
   form {
-    width:35%;
+    width:50%;
     height:20rem;
     align-items:center;
     display:flex;
@@ -110,6 +110,18 @@ const ContainerForm = styled.div`
     }
     button {
       margin:auto;
+      border:none;
+      border-radius:5px;
+      height:2.5rem;
+      width:50%;
+      font-weight:700;
+      color:#FFFFFF;
+      background-color:#FF4495;
+      font-family: 'B612 Mono', monospace;
+      :active{
+        background-color:#FFFFFF;
+        color:#FF4495;
+      }
     }
   }
 

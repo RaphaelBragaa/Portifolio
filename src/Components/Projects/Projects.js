@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import { GrReactjs } from "react-icons/gr"
 import { ImEarth } from "react-icons/im"
 import { BsGithub } from "react-icons/bs"
+import ScrollReveal from "scrollreveal"
 
 export default function Projects({ images, descriptions }) {
 const [selectedImage, setSelectedImage] = useState(null);
+
 
 const handleImageClick = (index) => {
 setSelectedImage(index);
@@ -74,7 +76,10 @@ const GalleryContainer = styled.div`
  background-color: #343541;
 
  @media (max-width: 767px) {
-    padding: 5rem;
+  align-items:center;
+  padding:2.5rem; 
+  width: 80%;
+
  }
 `
  
@@ -123,8 +128,10 @@ padding: 20px;
 border-radius: 20px;
 
 @media (max-width: 767px) {
+  flex-direction:column-reverse;
+   justify-content:start;
     width: 80%;
-    height: 60%;
+    height: 70%;
     padding: 10px;
 }
 
@@ -153,6 +160,22 @@ border-radius: 20px;
     justify-content:space-between;
     margin-bottom:20px;
   }
+  @media (max-width: 767px) {
+    height:60%;
+    width:80%;
+    overflow-y: scroll;
+    h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom:10px;
+  }
+  span{
+    width:40%;
+  }
+
+  }
 }
 
 .right-side {
@@ -167,6 +190,14 @@ border-radius: 20px;
     width: 70%;
     height: 40%;
     object-fit: cover;
+  }
+  @media (max-width: 767px) {
+    width: 96%;
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   }
 }
 }

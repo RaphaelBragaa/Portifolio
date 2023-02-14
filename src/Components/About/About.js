@@ -2,6 +2,7 @@ import styled from "styled-components"
 import rafa from "../../Assets/Images/rafa.jpg"
 
 export default function About(){
+    
     return(
         <>
         <Sobre>
@@ -26,7 +27,7 @@ const Sobre = styled.div`
     width:100%;
     height:40rem;
     background-color: #343541;
-
+    padding-top:15px;
     @media (max-width: 767px) {
         height: auto;
     }
@@ -39,8 +40,13 @@ const Title = styled.h1`
     font-size: 5rem;
     text-align:center;
 
+
     @media (max-width: 767px) {
         font-size: 2.5rem;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 `
 
@@ -53,6 +59,7 @@ const Container = styled.div`
     @media (max-width: 767px) {
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
 
     img{
@@ -60,10 +67,13 @@ const Container = styled.div`
         width:20rem;
         height:20rem;
         border: 5px solid #b21abd;
+        margin-bottom:5px;
 
         @media (max-width: 767px) {
             width: 10rem;
             height: 10rem;
+            max-width: 100%;
+            overflow: hidden;
         }
     }
 `
@@ -80,6 +90,10 @@ const Description = styled.h2`
         width: 80%;
         text-align: center;
         margin: 0;
+        /* max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; */
     }
 `
 

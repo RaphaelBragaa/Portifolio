@@ -1,13 +1,14 @@
 import styled from "styled-components"
 import javascript from "../../Assets/Images/jaavascript.png"
 
-export default function Cards({tec, tittle,color}) {
+export default function Cards({tec, tittle,color, size}) {
     return(
         <>
-            <Card color={color}>
-              <Logo src={tec}  />
-                <p>{tittle}</p>
-            </Card> 
+            
+            <div  style={{ fontSize: '4.5rem', color: '#FF4495' }}>
+              {tec} 
+            </div>
+          
         </>            
     )
 }
@@ -25,6 +26,7 @@ const Card = styled.div`
   justify-content: center;
   position: relative;
   transition: all 0.3s ease-out;
+  color: #FFFFFF;
   transition: background-color 0.9s ease;
   
   &:hover {
@@ -50,7 +52,7 @@ const Card = styled.div`
     }
 `;
 
-  const Logo = styled.img`
+  const Logo = styled.div`
         width:5rem;
         height:5rem;
         border-radius:15px;

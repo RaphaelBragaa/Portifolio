@@ -10,7 +10,7 @@ export default function Contact(){
     
     return (
         <>
-        <Tittle>Contate-me</Tittle>
+        <Tittle>Contatos</Tittle>
      <Container>
         <ContactBox>
         <img src={rafa}/>
@@ -33,7 +33,8 @@ const Container = styled.div`
     background-color: #343541;
     font-family: 'B612 Mono', monospace;
     display:flex;
-    justify-content:space-around;
+    align-items:center;
+    justify-content:center;
 
     @media (max-width: 767px) {
         flex-direction: column;
@@ -41,7 +42,7 @@ const Container = styled.div`
 `
 
 const ContactBox = styled.div`
-    width:40%;
+    width:30%;
     height:40rem;
     display:flex;
     flex-direction:column;
@@ -73,7 +74,7 @@ const ContactBox = styled.div`
     }
     .Email{
         margin-top:1rem;
-        width:30%;
+        width:40%;
         height: 2.5rem;
         display:flex;
         justify-content:center;

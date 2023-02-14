@@ -1,5 +1,24 @@
 import styled from "styled-components"
 import Cards from "../Cards/Cards"
+import { 
+    SiJavascript, 
+    SiHtml5, 
+    SiCss3, 
+    SiReact,
+    SiMongodb,
+    SiPostgresql,
+    SiTypescript,
+    SiJest,
+    SiPrisma,
+    SiFigma,
+    SiRedis,
+    SiCypress,
+    SiExpress,
+    SiLinux,
+    SiGit,
+    SiVisualstudiocode,
+    SiVite
+ } from 'react-icons/si'
 import javascript from "../../Assets/Images/jaavascript.png"
 import html from "../../Assets/Images/html5.png"
 import css from "../../Assets/Images/logo-css-3-2048.png"
@@ -17,17 +36,21 @@ import prisma from "../../Assets/Images/prisma-3.svg"
 export default function Tecnololgies() {
 
     const DataCards = [
-        {tec: javascript, tittle: "Javascript", color: "yellow"}, 
-        {tec: html, tittle: "Html", color: "#E65738"}, 
-        {tec: css, tittle: "CSS3", color: "#0C74BE"},
-        {tec: react, tittle: "React", color: "#282C34"},
-        {tec: styledC, tittle: "Styled Components", color: "#DDA0CB"},
-        {tec: mongodb, tittle: "MongoDB", color: "#52AD4D"},
-        {tec: postgreSQL, tittle: "PostgreSQL", color: "white"},
-        {tec: typescript, tittle: "Typescript", color: "#2D79C7"},
-        {tec: jest, tittle: "Jest", color: "red"},
-        {tec: prisma, tittle: "Prisma", color: "#2D79C7"},
-
+        {tec: <SiJavascript/>,  size: '4.5rem', tittle: "Javascript", color: "yellow"}, 
+        {tec: <SiHtml5/>, tittle: "Html", color: "#E65738"}, 
+        {tec: <SiCss3/>, tittle: "CSS3", color: "#0C74BE"},
+        {tec: <SiFigma/>, tittle: "CSS3", color: "#0C74BE"},
+        {tec: <SiReact/>, tittle: "React", color: "#282C34"},
+        {tec: <SiMongodb/>, tittle: "Styled Components", color: "#DDA0CB"},
+        {tec: <SiPostgresql/>, tittle: "MongoDB", color: "#52AD4D"},
+        {tec: <SiTypescript/>, tittle: "PostgreSQL", color: "white"},
+        {tec: <SiJest/>, tittle: "Typescript", color: "#2D79C7"},
+        {tec: <SiRedis/>, tittle: "Typescript", color: "#2D79C7"},
+        {tec: <SiCypress/>, tittle: "Typescript", color: "#2D79C7"},
+        {tec: <SiExpress/>, tittle: "Typescript", color: "#2D79C7"},
+        {tec: <SiLinux/>, tittle: "Typescript", color: "#2D79C7"},
+        {tec: <SiGit/>, tittle: "Typescript", color: "#2D79C7"},
+        {tec: <SiVisualstudiocode/>, tittle: "Typescript", color: "#2D79C7"},
 
     ]
 
@@ -36,7 +59,7 @@ export default function Tecnololgies() {
         <Tec>
             <Title>Tecnologias & Ferramentas</Title>
         <Deck>
-            {DataCards.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color}/>)})}
+            {DataCards.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
         </Deck>
         </Tec>
     )
@@ -44,33 +67,38 @@ export default function Tecnololgies() {
 
 const Tec = styled.div`
     width:100%;
-    height:60rem;
+    height:30rem;
     background-color: #343541;
-
+    @media (max-width: 800px) {
+    height:auto;
+  }
   
 `
 const Title = styled.h1`
-width:30%;
+width:50%;
  font-family: 'B612 Mono', monospace;
  font-weight:800;
  color:white;
- font-size: 2.5rem;
+ font-size: 2.8rem;
  text-align:center;
  padding-top:20px;
  margin:auto;
  margin-bottom: 30px;
 
+  @media (max-width: 800px) {
+    width:70%;
+  }
  
 `
 
 const Deck = styled.div`
     display: flex;
     margin:auto;
-    width:50%;
+    width:90%;
     flex-wrap:wrap;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items:center;
-    min-height: 40rem;
+    min-height: 20rem;
     background-color: #343541;
 
     @media (max-width: 800px) {
