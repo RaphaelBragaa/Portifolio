@@ -1,7 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import React, { useState } from 'react';
 import Forms from "../Forms/Forms";
-import rafa from "../../Assets/Images/rafa.jpg"
+import rafa from "../../Assets/Images/rafa.jpg";
+import { Link } from 'react-router-dom';
 import { BsLinkedin, BsGithub, BsWhatsapp } from 'react-icons/bs'
 
 
@@ -16,9 +17,9 @@ export default function Contact(){
         <ContactBox>
         <img src={rafa}/>
         <div className="Contacts">
-          <BsLinkedin fontSize={'3rem'} color={'#FF4495'} />
-            <BsGithub fontSize={'3rem'} color={'#FF4495'}/>
-            <BsWhatsapp fontSize={'3rem'} color={'#FF4495'}/>
+         <a href="https://www.linkedin.com/in/raphael-bragaa/" target="_blank"><BsLinkedin fontSize={'3rem'} color={'#FF4495'} /></a>
+         <a href="https://github.com/RaphaelBragaa" target="_blank"><BsGithub fontSize={'3rem'} color={'#FF4495'}/></a>
+         <a href="https://wa.me/5579999438484" target="_blank"><BsWhatsapp fontSize={'3rem'} color={'#FF4495'}/></a>
         </div>
         <div className="Email">
             <h2>rbragamouraa@gmail.com</h2>
