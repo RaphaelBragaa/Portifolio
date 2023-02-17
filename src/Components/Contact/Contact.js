@@ -6,6 +6,7 @@ import { BsLinkedin, BsGithub, BsWhatsapp } from 'react-icons/bs'
 
 
 
+
 export default function Contact(){
     
     return (
@@ -15,9 +16,9 @@ export default function Contact(){
         <ContactBox>
         <img src={rafa}/>
         <div className="Contacts">
-            <BsLinkedin fontSize={'2.8rem'} color={'#FF4495'} />
-            <BsGithub fontSize={'2.8rem'} color={'#FF4495'}/>
-            <BsWhatsapp fontSize={'2.8rem'} color={'#FF4495'}/>
+          <BsLinkedin fontSize={'3rem'} color={'#FF4495'} />
+            <BsGithub fontSize={'3rem'} color={'#FF4495'}/>
+            <BsWhatsapp fontSize={'3rem'} color={'#FF4495'}/>
         </div>
         <div className="Email">
             <h2>rbragamouraa@gmail.com</h2>
@@ -35,7 +36,7 @@ const Container = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
-
+    border: 2px solid  #343541;
     @media (max-width: 767px) {
         flex-direction: column;
     }
@@ -56,9 +57,9 @@ const ContactBox = styled.div`
     }
 
     img{
-        width:11rem;
-        height:11rem;
-        border-radius:5rem;
+        width:15rem;
+        height:15rem;
+        border-radius:8rem;
     }
     .Contacts{
         margin-top:20px;
@@ -107,7 +108,7 @@ const Tittle = styled.h1`
     text-align:center;
     padding-top:20px;
     margin:auto;
-
+    border: 2px solid  #343541;
     @media (max-width: 767px) {
         font-size: 3rem;
     }

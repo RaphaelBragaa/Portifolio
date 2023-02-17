@@ -19,16 +19,7 @@ import {
     SiVisualstudiocode,
     SiVite
  } from 'react-icons/si'
-import javascript from "../../Assets/Images/jaavascript.png"
-import html from "../../Assets/Images/html5.png"
-import css from "../../Assets/Images/logo-css-3-2048.png"
-import mongodb from "../../Assets/Images/mongodb.png"
-import postgreSQL from "../../Assets/Images/Postgresql.svg.png"
-import react from "../../Assets/Images/React-icon.svg.png"
-import typescript from "../../Assets/Images/Typescript_logo_2020.svg.png"
-import styledC from "../../Assets/Images/style.png"
-import jest from "../../Assets/Images/jest.png"
-import prisma from "../../Assets/Images/prisma-3.svg"
+
 
 
 
@@ -51,7 +42,8 @@ export default function Tecnololgies() {
         {tec: <SiLinux/>, tittle: "Typescript", color: "#2D79C7"},
         {tec: <SiGit/>, tittle: "Typescript", color: "#2D79C7"},
         {tec: <SiVisualstudiocode/>, tittle: "Typescript", color: "#2D79C7"},
-
+        {tec: <SiPrisma/>, tittle: "Typescript", color: "#2D79C7"},
+        {tec: <SiVite/>, tittle: "Typescript", color: "#2D79C7"}
     ]
 
 
@@ -69,6 +61,7 @@ const Tec = styled.div`
     width:100%;
     height:30rem;
     background-color: #343541;
+    border: 2px solid  #343541;
     @media (max-width: 800px) {
     height:auto;
   }

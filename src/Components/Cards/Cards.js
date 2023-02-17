@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import javascript from "../../Assets/Images/jaavascript.png"
 
 export default function Cards({tec, tittle,color, size}) {
     return(

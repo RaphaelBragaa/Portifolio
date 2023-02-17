@@ -1,18 +1,28 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Forms(){
-    const [nome, setNome] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [assunto, setAssunto] = useState('');
-    const [mensagem, setMensagem] = useState('');
+    const [message, setMessage] = useState('');
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      console.log('Nome:', nome);
-      console.log('Email:', email);
-      console.log('Assunto:', assunto);
-      console.log('Mensagem:', mensagem);
+      const TemplateParams = {
+        from_name: name,
+        message,
+        email
+      }
+     emailjs.send("service_6xkn3je","template_p7c4fpp", TemplateParams, "xlDl4zoTkHzp40WBX")
+     .then((response)=> {
+      console.log(response.status)
+      setEmail('')
+      setMessage('')
+      setName('')
+     }).catch((err) => {
+      console.log(err)
+     })
     };
   
     return (
@@ -24,9 +34,9 @@ export default function Forms(){
           <input
             type="text"
             id="nome"
-            value={nome}
+            value={name}
             placeholder="Nome"
-            onChange={(event) => setNome(event.target.value)}
+            onChange={(event) => setName(event.target.value)}
           />
         </div>
         <div>
@@ -39,20 +49,11 @@ export default function Forms(){
           />
         </div>
         <div>
-          <input
-            type="text"
-            id="assunto"
-            value={assunto}
-            placeholder="Assunto"
-            onChange={(event) => setAssunto(event.target.value)}
-          />
-        </div>
-        <div>
           <textarea
             id="mensagem"
-            value={mensagem}
+            value={message}
             placeholder="Mensagem"
-            onChange={(event) => setMensagem(event.target.value)}
+            onChange={(event) => setMessage(event.target.value)}
           />
         </div>
         <button type="submit">Enviar</button>
