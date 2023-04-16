@@ -2,14 +2,15 @@ import styled from "styled-components";
 import React, { useState } from 'react';
 import Forms from "../Forms/Forms";
 import rafa from "../../Assets/Images/rafa.jpg";
-import { Link } from 'react-router-dom';
 import { BsLinkedin, BsGithub, BsWhatsapp } from 'react-icons/bs'
 
 
 
 
+
+
 export default function Contact(){
-    
+
     return (
         <>
         <Tittle>Contatos</Tittle>

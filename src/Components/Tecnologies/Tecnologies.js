@@ -23,9 +23,7 @@ import {
 
 
 
-
 export default function Tecnololgies() {
-
     const DataCards = [
         {tec: <SiJavascript/>,  size: '4.5rem', tittle: "Javascript", color: "yellow"}, 
         {tec: <SiHtml5/>, tittle: "Html", color: "#E65738"}, 

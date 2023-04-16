@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { GrReactjs } from "react-icons/gr"
 import { ImEarth } from "react-icons/im"
 import { BsGithub } from "react-icons/bs"
-import ScrollReveal from "scrollreveal"
 
-export default function Projects({ images, descriptions }) {
+
+export default function Projects({ images, descriptions, sectionRef, projects }) {
 const [selectedImage, setSelectedImage] = useState(null);
 
 
@@ -19,11 +19,11 @@ setSelectedImage(null);
 
 return (
     <>
-    <Title>PROJETOS</Title>
+    <Title ref={ sectionRef }>PROJETOS</Title>
         <GalleryContainer>
-            {images.map((image, index) => (
+            {projects.map((project, index) => (
             <ImageContainer key={index} onClick={() => handleImageClick(index)}>
-            <img src={image} />
+            <img src={project.image} />
             </ImageContainer>
             ))}
         </GalleryContainer>
@@ -32,7 +32,7 @@ return (
         <div className="modal-content">
         <div className="left-side">
         <h3>Image Description</h3>
-        <p>{descriptions[selectedImage]}</p>
+        <p>{projects.description[selectedImage]}</p>
         <h3>Tecnologias</h3>
         <span>
             <GrReactjs fontSize={'2.5rem'}/>
@@ -45,7 +45,7 @@ return (
         </span>
         </div>
         <div className="right-side">
-        <img src={images[selectedImage]} />
+        <img src={projects.image[selectedImage]} />
         
         </div>
         </div>
