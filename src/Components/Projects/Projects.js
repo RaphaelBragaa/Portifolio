@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import { GrReactjs } from "react-icons/gr"
 import { ImEarth } from "react-icons/im"
 import { BsGithub } from "react-icons/bs"
+import ScrollReveal from "scrollreveal"
 
-
-export default function Projects({ images, descriptions, sectionRef, projects }) {
+export default function Projects({ images, descriptions, projects }) {
 const [selectedImage, setSelectedImage] = useState(null);
 
 
 const handleImageClick = (index) => {
-setSelectedImage(index);
+setSelectedImage(projects[index]);
 };
 
 const closeModal = () => {
@@ -19,11 +19,11 @@ setSelectedImage(null);
 
 return (
     <>
-    <Title ref={ sectionRef }>PROJETOS</Title>
+    <Title>PROJETOS</Title>
         <GalleryContainer>
-            {projects.map((project, index) => (
-            <ImageContainer key={index} onClick={() => handleImageClick(index)}>
-            <img src={project.image} />
+            {images.map((image, index) => (
+            <ImageContainer key={index} onClick={() => handleImageClick(index)}> 
+            <img src={image} />
             </ImageContainer>
             ))}
         </GalleryContainer>
@@ -31,8 +31,8 @@ return (
         <ModalContainer onClick={closeModal}>
         <div className="modal-content">
         <div className="left-side">
-        <h3>Image Description</h3>
-        <p>{projects.description[selectedImage]}</p>
+        {/* <h3>Image Description</h3> */}
+        <p>{selectedImage && selectedImage.description}</p>
         <h3>Tecnologias</h3>
         <span>
             <GrReactjs fontSize={'2.5rem'}/>
@@ -45,8 +45,8 @@ return (
         </span>
         </div>
         <div className="right-side">
-        <img src={projects.image[selectedImage]} />
-        
+        <img src={selectedImage && selectedImage.image} />
+  
         </div>
         </div>
         </ModalContainer>
@@ -146,7 +146,7 @@ border-radius: 20px;
   box-shadow:30px;
   
   h3 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight:700;
     text-align:color-interpolation-filters;
