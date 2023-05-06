@@ -20,6 +20,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	background-color: #343541;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

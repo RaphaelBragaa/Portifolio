@@ -9,18 +9,19 @@ export default function About({ UseRef }){
 
     return(
         <>
-        <Sobre >
-          <Title>Sobre mim</Title>
+        <Sobre data-aos="fade-up">
+          <Title id="sobre">Sobre mim</Title>
             <Container>
                 <img src={rafa}/>
                 <Description>
-                Olá! Meu nome é Raphael Braga, sou um desenvolvedor Full Stack apaixonado por inovação e criatividade. Eu nasci em Aracaju, tenho 24 anos e estou sempre buscando maneiras de utilizar minha paixão para criar soluções eficazes e inovadoras.
-
-Acredito que minha formação sólida em desenvolvimento web Full Stack e minha vontade de aprender e me adaptar constantemente, me permitem criar um impacto real no mundo digital. Completei recentemente o Bootcamp da Driven em desenvolvimento web Full Stack, onde trabalhei em projetos práticos, colaborando com colegas de turma e desenvolvendo habilidades de comunicação e trabalho em equipe utilizando metodologias ágeis como o SCRUM.
-
-Ao longo do Bootcamp, aprendi a construir aplicativos web completos, utilizando as tecnologias mais recentes e tendências do mercado, como Node.js, TypeScript, Express.js, MongoDB e PostgreSQL. Além disso, adotei a importância da utilização de uma arquitetura de software bem definida e práticas de clean code, visando sempre a melhor qualidade de entrega do código e facilitando sua manutenção.
-
-Estou muito animado para continuar minha jornada como desenvolvedor web e procurando oportunidades para colaborar e me engajar em projetos impactantes e desafiadores.
+                Olá, sou um desenvolvedor Full Stack movido por desafios e fascinado por criar soluções inovadoras que impactem a vida das
+                 pessoas.<br/><br/>
+                 Trabalho principalmente com Javascript/Typescript, com foco em NodeJS, e tenho conhecimento em bancos de dados SQL (PostgreSQL),
+                  NoSQL (MongoDB) e de memória primária (Redis), além de usar ORM como o Prisma.<br/><br/>
+                Também tenho experiência em testes com Jest/Vitest (Integração, Unitário e Load) e no Front-end, utilizo React, Styled-Components,
+                 CSS, SASS, Adonis.js, Elixir e Phoenix. Em relação a Infra/DevOps, possuo conhecimento básico em AWS (EC2) e Docker.<br/><br/>
+                  Além disso, busco aprimorar constantemente minhas habilidades, tanto técnicas quanto em soft skills, como proatividade, 
+                  resiliência e conhecimento em metodologias ágeis como SCRUM/Kanban.
                 </Description> 
           </Container>
         </Sobre>
@@ -30,7 +31,7 @@ Estou muito animado para continuar minha jornada como desenvolvedor web e procur
 
 const Sobre = styled.div`
     width:100%;
-    height:60rem;
+    min-height:50rem;
     background-color: #343541;
     padding-top:15px;
     @media (max-width: 767px) {
@@ -69,10 +70,13 @@ const Container = styled.div`
 
     img{
         border-radius:15px;
-        width:20rem;
-        height:20rem;
-        border: 5px solid #b21abd;
+        width:15rem;
+        height:15rem;
+        border-radius:170px;
         margin-bottom:5px;
+        -webkit-box-shadow: -12px 14px 5px 3px rgba(0,0,0,0.32);
+        -moz-box-shadow: -12px 14px 5px 3px rgba(0,0,0,0.32);
+        box-shadow: -12px 14px 5px 3px rgba(0,0,0,0.32);
 
         @media (max-width: 767px) {
             width: 10rem;
@@ -83,9 +87,9 @@ const Container = styled.div`
     }
 `
 
-const Description = styled.h2`
+const Description = styled.p`
     color: #FFFFFF;
-    width: 50%;
+    width: 40%;
     text-align:left;
     margin-left:20px;
     font-family: 'B612 Mono', monospace;

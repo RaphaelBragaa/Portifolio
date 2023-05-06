@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { GrReactjs } from "react-icons/gr"
-import { ImEarth } from "react-icons/im"
-import { BsGithub } from "react-icons/bs"
-import ScrollReveal from "scrollreveal"
+import { GrReactjs } from "react-icons/gr";
+import { ImEarth } from "react-icons/im";
+import { BsGithub } from "react-icons/bs";
 
-export default function Projects({ images, descriptions, projects }) {
+export default function Projects({ projects }) {
 const [selectedImage, setSelectedImage] = useState(null);
 
 
+
 const handleImageClick = (index) => {
-setSelectedImage(projects[index]);
+  setSelectedImage({ image: projects[index].image,
+                     title: projects[index].title, 
+                     description: projects[index].description, 
+                     tecnologies: projects[index].tecnologies, 
+                     deploy: projects[index].deploy,
+                     repo:[projects[index].repo]
+                    });
 };
+
 
 const closeModal = () => {
 setSelectedImage(null);
@@ -19,11 +26,11 @@ setSelectedImage(null);
 
 return (
     <>
-    <Title>PROJETOS</Title>
+    <Title id="projetos">PROJETOS</Title>
         <GalleryContainer>
-            {images.map((image, index) => (
-            <ImageContainer key={index} onClick={() => handleImageClick(index)}> 
-            <img src={image} />
+            {projects.map((project, index) => (
+            <ImageContainer data-aos="zoom-in" key={index} onClick={() => handleImageClick(index)}> 
+            <img src={project.image} />
             </ImageContainer>
             ))}
         </GalleryContainer>
@@ -31,21 +38,26 @@ return (
         <ModalContainer onClick={closeModal}>
         <div className="modal-content">
         <div className="left-side">
-        {/* <h3>Image Description</h3> */}
-        <p>{selectedImage && selectedImage.description}</p>
+         <h2>{selectedImage.title}</h2>
+         <br/>
+        <p>{selectedImage.description}</p>
         <h3>Tecnologias</h3>
-        <span>
-            <GrReactjs fontSize={'2.5rem'}/>
-            <GrReactjs fontSize={'2.5rem'}/>
-        </span>
+        <span style={{ fontSize: '3rem'}}>
+            {selectedImage.tecnologies}
+          </span>
         <h3>Links</h3>
-        <span>
-            <ImEarth fontSize={'2.5rem'}/>
-            <BsGithub fontSize={'2.5rem'}/>
+        <span style={{width:'15%'}}>
+        <a href={selectedImage.deploy} target="_blank">
+          <ImEarth fontSize={'2.5rem'}  color={'#FFFFFF'} />
+        </a>
+        <a href={selectedImage.repo[0]} target="_blank">
+          <BsGithub fontSize={'2.5rem'} color={'#FFFFFF'} />
+        </a>
+            
         </span>
         </div>
         <div className="right-side">
-        <img src={selectedImage && selectedImage.image} />
+        <img src={selectedImage.image} />
   
         </div>
         </div>
@@ -64,9 +76,6 @@ const Title = styled.h1`
     background-color: #343541;
     border: 2px solid  #343541;
 
-    @media (max-width: 767px) {
-        font-size: 2.5rem;
-    }
 `
 
 const GalleryContainer = styled.div`
@@ -139,29 +148,45 @@ border-radius: 20px;
 
 .left-side {
   width: 50%;
+  border-radius:5px;
   padding-right: 20px;
   background-color:#b21abd;
   padding-left:30px;
   padding-top: 15px;
   box-shadow:30px;
+  border:1px solid;
+  h2{
+    background-color:transparent;
+    font-size:1.2rem;
+    font-family: 'B612 Mono', monospace;
+  }
   
   h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight:700;
     text-align:color-interpolation-filters;
+    background-color:transparent;
+    
   }
   
   p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom:10px;
+    background-color:transparent;
   }
   span{
-    width:20%;
+    min-width:20%;
+    max-width:50%;
     display:flex;
     justify-content:space-between;
     margin-bottom:20px;
+    background-color:transparent;
   }
+  a{
+  background-color:transparent;  
+  }
+  
   @media (max-width: 767px) {
     height:60%;
     width:80%;
@@ -176,6 +201,7 @@ border-radius: 20px;
   span{
     width:40%;
   }
+  
 
   }
 }

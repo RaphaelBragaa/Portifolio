@@ -13,8 +13,8 @@ export default function Contact(){
 
     return (
         <>
-        <Tittle>Contatos</Tittle>
-     <Container>
+        <Tittle id="contatos" data-aos="fade-up">Contatos</Tittle>
+     <Container data-aos="fade-up">
         <ContactBox>
         <img src={rafa}/>
         <div className="Contacts">
@@ -26,7 +26,7 @@ export default function Contact(){
             <h2>rbragamouraa@gmail.com</h2>
         </div>
         </ContactBox>
-     <Forms/>
+     <Forms data-aos="fade-up"/>
      </Container>
      </>
     )
@@ -77,7 +77,7 @@ const ContactBox = styled.div`
     }
     .Email{
         margin-top:1rem;
-        width:40%;
+        max-width:40%;
         height: 2.5rem;
         display:flex;
         justify-content:center;
@@ -91,6 +91,10 @@ const ContactBox = styled.div`
             width: 70%;
             height: 2rem;
             margin-bottom:1rem;
+
+            .Email{
+                display:none;
+            }
         }
 
         h2{

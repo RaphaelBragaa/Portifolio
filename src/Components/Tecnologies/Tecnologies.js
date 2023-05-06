@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import Cards from "../Cards/Cards"
+import styled from "styled-components";
+import Cards from "../Cards/Cards";
 import { 
     SiJavascript, 
     SiHtml5, 
@@ -17,51 +17,103 @@ import {
     SiLinux,
     SiGit,
     SiVisualstudiocode,
-    SiVite
- } from 'react-icons/si'
+    SiVite,
+    SiDocker,
+    SiSpringboot,
+    SiNextdotjs
+ } from 'react-icons/si';
+ import { FaJava, FaAws } from 'react-icons/fa';
+
 
 
 
 
 export default function Tecnololgies() {
-    const DataCards = [
-        {tec: <SiJavascript/>,  size: '4.5rem', tittle: "Javascript", color: "yellow"}, 
-        {tec: <SiHtml5/>, tittle: "Html", color: "#E65738"}, 
-        {tec: <SiCss3/>, tittle: "CSS3", color: "#0C74BE"},
-        {tec: <SiFigma/>, tittle: "CSS3", color: "#0C74BE"},
-        {tec: <SiReact/>, tittle: "React", color: "#282C34"},
-        {tec: <SiMongodb/>, tittle: "Styled Components", color: "#DDA0CB"},
-        {tec: <SiPostgresql/>, tittle: "MongoDB", color: "#52AD4D"},
-        {tec: <SiTypescript/>, tittle: "PostgreSQL", color: "white"},
-        {tec: <SiJest/>, tittle: "Typescript", color: "#2D79C7"},
-        {tec: <SiRedis/>, tittle: "Typescript", color: "#2D79C7"},
-        {tec: <SiCypress/>, tittle: "Typescript", color: "#2D79C7"},
-        {tec: <SiExpress/>, tittle: "Typescript", color: "#2D79C7"},
-        {tec: <SiLinux/>, tittle: "Typescript", color: "#2D79C7"},
-        {tec: <SiGit/>, tittle: "Typescript", color: "#2D79C7"},
-        {tec: <SiVisualstudiocode/>, tittle: "Typescript", color: "#2D79C7"},
-        {tec: <SiPrisma/>, tittle: "Typescript", color: "#2D79C7"},
-        {tec: <SiVite/>, tittle: "Typescript", color: "#2D79C7"}
+    const Tools = [
+        {tec: <SiVisualstudiocode/>, tittle: "Visual Studio Code"},
+        {tec: <SiLinux/>, tittle: "Linux"},
+        {tec: <SiGit/>, tittle: "Git"},
+        {tec: <SiDocker/>, tittle: "Docker"},
+        {tec: <FaAws/>, tittle: "AWS"},
+        {tec: <SiFigma/>, tittle: "Figma"}
+    ]
+    const FrontEnd = [ 
+        {tec: <SiHtml5/>, tittle: "Html"}, 
+        {tec: <SiCss3/>, tittle: "CSS3"},
+        {tec: <SiReact/>, tittle: "ReactJS"},
+        {tec: <SiVite/>, tittle: "Vite"},
+        {tec: <SiNextdotjs/>, tittle: "NextJS"}
+    ]
+    const Languages = [
+        {tec: <FaJava/>, tittle: "Java"},
+        {tec: <SiJavascript/>,  size: '4.5rem', tittle: "Javascript"},
+        {tec: <SiTypescript/>, tittle: "TypeScript"}
+    ]
+    const BackEnd = [
+        {tec: <SiMongodb/>, tittle: "MongoDB"},
+        {tec: <SiPostgresql/>, tittle: "PostgreSQL"},
+        {tec: <SiRedis/>, tittle: "Redis"},
+        {tec: <SiExpress/>, tittle: "ExpressJS"},
+        {tec: <SiPrisma/>, tittle: "Prisma"},
+        {tec: <SiSpringboot/>, tittle: "Spring Boot"}
+    ]
+    const Test = [
+        {tec: <SiJest/>, tittle: "Jest"},
+        {tec: <SiCypress/>, tittle: "Cypress"}
     ]
 
 
     return(
+        <>
+         <Title id="tecnologias">Tecnologias</Title>
         <Tec>
-            <Title>Tecnologias & Ferramentas</Title>
-        <Deck>
-            {DataCards.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
-        </Deck>
+         <Container >
+            <h1>Linguages:</h1>
+            <Deck data-aos="fade-right">
+                {Languages.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
+            </Deck>
+        </Container>   
+        <Container>
+            <h1>Front End:</h1>
+          <Deck data-aos="fade-right">
+            {FrontEnd.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
+          </Deck>  
+        </Container>
+        <Container>
+            <h1>Back End:</h1>
+            <Deck data-aos="fade-right">
+                {BackEnd.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
+            </Deck>
+        </Container>
+        <Container data-aos="fade-right">
+            <h1>Teste:</h1>
+            <Deck>
+                {Test.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
+            </Deck>
+        </Container>
+        <Container>
+            <h1>Ferramentas:</h1>
+            <Deck data-aos="fade-right">
+                {Tools.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
+            </Deck>
+        </Container>
+       
         </Tec>
+        </>
     )
 }
 
 const Tec = styled.div`
     width:100%;
-    height:30rem;
+    height:70rem;
+    
+   
     background-color: #343541;
-    border: 2px solid  #343541;
     @media (max-width: 800px) {
-    height:auto;
+    height: 100%; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
   }
   
 `
@@ -70,30 +122,73 @@ width:50%;
  font-family: 'B612 Mono', monospace;
  font-weight:800;
  color:white;
- font-size: 2.8rem;
+ font-size: 5rem;
  text-align:center;
  padding-top:20px;
  margin:auto;
  margin-bottom: 30px;
+ background-color:#343541; 
 
   @media (max-width: 800px) {
     width:70%;
+    font-size: 2.5rem;
+
   }
  
 `
 
 const Deck = styled.div`
     display: flex;
-    margin:auto;
-    width:90%;
+
+    width:70%;
     flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:center;
-    min-height: 20rem;
+    justify-content:space-around;
+    text-align:center;
     background-color: #343541;
+    margin-bottom:10px;
+    .card{
+        
+        :hover{ 
+            transform: scale(1.1); 
+            cursor:pointer;
+         }
+         .test{
+            font-size:1.2rem;
+            align-items:center;
+            margin:auto;
+            margin-top:5px;
+         }
+    }
+
 
     @media (max-width: 800px) {
-        width: 80%;
+    width: auto; 
+    flex-grow: 1; 
+    align-items: center;
+    .card {
+      margin: 0 10px; 
     }
+  }
+`
+
+const Container = styled.div`
+    font-family: 'B612 Mono', monospace;
+    color: #FFFFFF;
+    padding-left:12rem;
+    margin: auto;
+    display:flex;
+    flex-direction:column;
+    height:12rem;
+    h1{
+        font-size:2rem;
+        margin-bottom:10px;
+    }
+    @media (max-width: 800px) {
+    overflow-x: scroll;
+    padding-left: 0;
+    height: auto; 
+    width: auto; 
+    flex-shrink: 0; 
+  }
 `
 

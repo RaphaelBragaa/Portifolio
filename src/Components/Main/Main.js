@@ -10,8 +10,12 @@ export default function Main(){
              <h1>
                 Olá, meu nome é
                 <strong> Raphael Braga, </strong>
-                 desenvolvedor Web FullStack
-                <Cursor/>
+               
+                <a href="https://git.io/typing-svg"> 
+                  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=1000&color=FFFFFF&width=435&lines=Desenvolvedor+Full+Stack;Freelancer" alt="Typing SVG" />
+                {/* <Cursor/> */}
+                </a>
+                
             </h1> 
         
         </Home>
@@ -56,14 +60,17 @@ const Home = styled.div`
     text-align:left;
     white-space: normal;
     width: 25%;
-    height: 30%;
+    height: 20%;
     color:white;
-    font-size:2rem;
+    font-size:3rem;
     font-family: 'B612 Mono', monospace;
-
+    background-color: transparent;
+    a, img, strong{
+      background-color: transparent;
+    }
     strong{
         color: #b21abd;
-        font-size:3rem;
+        font-size:3.5rem;
         font-weight:800;
     }
   }
