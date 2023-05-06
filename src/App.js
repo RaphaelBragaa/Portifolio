@@ -21,14 +21,15 @@ export default function App() {
   return (
       
       <div className="App">
-        <GlobalStyle/>
+        <GlobalStyle/> 
+        
         <Header/>
         <Main/>
         <About/>
         <Tecnololgies/>
         <Projects projects={projects} />
         <Contact/>
-        <Pointer/>
+       <Pointer/>
       </div>
     
   );

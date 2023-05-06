@@ -26,7 +26,7 @@ setSelectedImage(null);
 
 return (
     <>
-    <Title id="projetos">PROJETOS</Title>
+    <Title data-aos="fade-up" id="projetos">Projetos</Title>
         <GalleryContainer>
             {projects.map((project, index) => (
             <ImageContainer data-aos="zoom-in" key={index} onClick={() => handleImageClick(index)}> 
@@ -46,7 +46,7 @@ return (
             {selectedImage.tecnologies}
           </span>
         <h3>Links</h3>
-        <span style={{width:'15%'}}>
+        <span style={{width:'20%'}}>
         <a href={selectedImage.deploy} target="_blank">
           <ImEarth fontSize={'2.5rem'}  color={'#FFFFFF'} />
         </a>
@@ -75,7 +75,9 @@ const Title = styled.h1`
     text-align:center;
     background-color: #343541;
     border: 2px solid  #343541;
-
+    @media (max-width: 767px) {
+      font-size: 3rem;
+    }
 `
 
 const GalleryContainer = styled.div`
@@ -158,13 +160,13 @@ border-radius: 20px;
   h2{
     background-color:transparent;
     font-size:1.2rem;
-    font-family: 'B612 Mono', monospace;
+    font-weight:700;
   }
   
   h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    font-weight:700;
+    
     text-align:color-interpolation-filters;
     background-color:transparent;
     
@@ -185,6 +187,13 @@ border-radius: 20px;
   }
   a{
   background-color:transparent;  
+  }
+  @media (max-width:1280px){
+  
+      
+      overflow-x: scroll;
+    
+    
   }
   
   @media (max-width: 767px) {

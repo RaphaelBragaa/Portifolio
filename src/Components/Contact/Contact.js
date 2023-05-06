@@ -77,7 +77,7 @@ const ContactBox = styled.div`
     }
     .Email{
         margin-top:1rem;
-        max-width:40%;
+        width:45%;
         height: 2.5rem;
         display:flex;
         justify-content:center;
@@ -88,7 +88,7 @@ const ContactBox = styled.div`
         font-family: 'B612 Mono', monospace;
 
         @media (max-width: 767px) {
-            width: 70%;
+            width: 90%;
             height: 2rem;
             margin-bottom:1rem;
 

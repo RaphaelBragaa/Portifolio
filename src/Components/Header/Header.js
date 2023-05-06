@@ -7,15 +7,9 @@ import { Link } from 'react-scroll';
   
 export default function Header() {
 
-  const ref = useRef(null);
-  function handleItemClick () {
-    ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
-
     return(
         <>
-            <Container>
+            <Container id="header">
             <h1>
                 <strong>&lt;</strong>RaphaelBraga<strong>/&gt;</strong>
             </h1>

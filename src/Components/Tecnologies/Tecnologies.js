@@ -65,8 +65,8 @@ export default function Tecnololgies() {
 
     return(
         <>
-         <Title id="tecnologias">Tecnologias</Title>
-        <Tec>
+         <Title data-aos="fade-up" id="tecnologias">Tecnologias</Title>
+        <Tec data-aos="fade-up">
          <Container >
             <h1>Linguages:</h1>
             <Deck data-aos="fade-right">
@@ -85,9 +85,9 @@ export default function Tecnololgies() {
                 {BackEnd.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
             </Deck>
         </Container>
-        <Container data-aos="fade-right">
+        <Container >
             <h1>Teste:</h1>
-            <Deck>
+            <Deck data-aos="fade-right">
                 {Test.map((DataCard)=>{return(<Cards tec={DataCard.tec} tittle={DataCard.tittle} color={DataCard.color} size={DataCard.size}/>)})}
             </Deck>
         </Container>
@@ -151,6 +151,11 @@ const Deck = styled.div`
         :hover{ 
             transform: scale(1.1); 
             cursor:pointer;
+         }
+         .p{
+            :hover{
+                display: inline;
+            }
          }
          .test{
             font-size:1.2rem;

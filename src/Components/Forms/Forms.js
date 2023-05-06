@@ -119,6 +119,7 @@ const ContainerForm = styled.div`
       color:#FFFFFF;
       background-color:#FF4495;
       font-family: 'B612 Mono', monospace;
+      cursor: pointer;
       :active{
         background-color:#FFFFFF;
         color:#FF4495;

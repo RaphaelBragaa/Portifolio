@@ -9,8 +9,8 @@ export default function About({ UseRef }){
 
     return(
         <>
-        <Sobre data-aos="fade-up">
-          <Title id="sobre">Sobre mim</Title>
+        <Sobre id="sobre" data-aos="fade-up">
+          <Title >Sobre mim</Title>
             <Container>
                 <img src={rafa}/>
                 <Description>
