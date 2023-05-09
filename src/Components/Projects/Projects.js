@@ -73,7 +73,7 @@ const Title = styled.h1`
     color: #FFFFFF;
     font-size: 5rem;
     text-align:center;
-    background-color: #343541;
+
     border: 2px solid  #343541;
     @media (max-width: 767px) {
       font-size: 3rem;
@@ -85,13 +85,11 @@ const GalleryContainer = styled.div`
  flex-wrap: wrap; 
  justify-content: space-between; 
  padding: 10rem;
- background-color: #343541;
  border: 2px solid  #343541;
-
  @media (max-width: 767px) {
   align-items:center;
   padding:2.5rem; 
-  width: 80%;
+  width: 76%;
 
  }
 `
@@ -107,7 +105,7 @@ cursor: pointer;
 
 @media (max-width: 767px) {
   height: 150px;
-        width: 150px;
+        width: 48%;
     overflow: hidden;
 }
 

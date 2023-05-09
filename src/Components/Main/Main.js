@@ -7,13 +7,12 @@ export default function Main(){
     return(
       <>
         <Home background2={background}>
-             <h1>
+              <h1>
                 Olá, meu nome é
                 <strong> Raphael Braga, </strong>
                
-               <a href="https://git.io/typing-svg"> 
+                <a href="https://git.io/typing-svg"> 
                   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=1000&color=FFFFFF&width=435&lines=Desenvolvedor+Full+Stack;Freelancer" alt="Typing SVG" />
-               {/*   <Cursor/> */}
                 </a>
                 
             </h1> 
@@ -81,7 +80,7 @@ const Home = styled.div`
              font-size: 2rem; 
         strong { font-size: 2.5rem; } 
         img{
-          width: 85%;
+          width: 95%;
         }
       } 
       

@@ -77,7 +77,7 @@ background-color:black;
         width:100%;
         margin-top:1rem;
         h2{
-            font-size:1.2rem;
+            font-size:1rem;
         }
     }
 }`
