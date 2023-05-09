@@ -25,11 +25,11 @@ export default function App() {
         
         <Header/>
         <Main/>
-        {/*  <About/>
+      <About/>
        <Tecnololgies/>
         <Projects projects={projects} />
         <Contact/>
-       <Pointer/> */}
+       <Pointer/> 
       </div>
     
   );
