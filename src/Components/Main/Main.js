@@ -81,7 +81,7 @@ const Home = styled.div`
              font-size: 2rem; 
         strong { font-size: 2.5rem; } 
         img{
-          width: 90%;
+          width: 85%;
         }
       } 
       
