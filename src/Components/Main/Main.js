@@ -1,4 +1,4 @@
-import styled,{ keyframes } from "styled-components"
+import styled from "styled-components"
 import background from "../../Assets/Images/5927911.gif"
 
 
@@ -11,9 +11,9 @@ export default function Main(){
                 Olá, meu nome é
                 <strong> Raphael Braga, </strong>
                
-                <a href="https://git.io/typing-svg"> 
+               <a href="https://git.io/typing-svg"> 
                   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=1000&color=FFFFFF&width=435&lines=Desenvolvedor+Full+Stack;Freelancer" alt="Typing SVG" />
-                {/* <Cursor/> */}
+               {/*   <Cursor/> */}
                 </a>
                 
             </h1> 
@@ -56,6 +56,7 @@ const Home = styled.div`
   align-items:center;
   display:flex;
   justify-content:center;
+  width:100%;
   h1{
     text-align:left;
     white-space: normal;
@@ -78,7 +79,13 @@ const Home = styled.div`
      height: 40rem; 
         h1 { width: 70%; 
              font-size: 2rem; 
-        strong { font-size: 2.5rem; } } } 
+        strong { font-size: 2.5rem; } 
+        img{
+          width: 90%;
+        }
+      } 
+      
+      } 
   
 `
 
