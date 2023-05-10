@@ -19,7 +19,7 @@ export default function About({ UseRef }){
                  Trabalho principalmente com Javascript/Typescript, com foco em NodeJS, e tenho conhecimento em bancos de dados SQL (PostgreSQL),
                   NoSQL (MongoDB) e de memória primária (Redis), além de usar ORM como o Prisma.<br/><br/>
                 Também tenho experiência em testes com Jest/Vitest (Integração, Unitário e Load) e no Front-end, utilizo React, Styled-Components,
-                 CSS, SASS, Adonis.js, Elixir e Phoenix. Em relação a Infra/DevOps, possuo conhecimento básico em AWS (EC2) e Docker.<br/><br/>
+                 CSS, Next. Em relação a Infra/DevOps, possuo conhecimento básico em CI/CD, AWS (EC2) e Docker.<br/><br/>
                   Além disso, busco aprimorar constantemente minhas habilidades, tanto técnicas quanto em soft skills, como proatividade, 
                   resiliência e conhecimento em metodologias ágeis como SCRUM/Kanban.
                 </Description> 
