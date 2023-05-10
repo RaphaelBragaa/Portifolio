@@ -171,7 +171,7 @@ border-radius: 20px;
   }
   
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom:10px;
     background-color:transparent;
   }
