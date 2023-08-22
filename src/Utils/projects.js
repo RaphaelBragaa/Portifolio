@@ -51,7 +51,7 @@ export const projects = [
       image:MyWallet,
       title:"MyWallet | Software Web de Controle Financeiro",
       description:"Aplicação de controle financeiro, meu primeiro projeto Full-Stack, implementei funcionalidades de inscrição e login, operações básicas do CRUD (Criar, Ler, Atualizar e Excluir) para que o usuário possa gerenciar a entrada e saída de dinheiro  de forma fácil e eficiente, além de implementar arquitetura em camadas na construção da api.",
-      deploy:"http://projeto13-mywallet-front-sigma-self.vercel.app/",
+      deploy:"https://projeto13-mywallet-front-jz1dkg8bv-raphaelbragaa.vercel.app/",
       repo:["https://github.com/RaphaelBragaa/projeto13-mywallet-front","https://github.com/RaphaelBragaa/projeto13-mywallet-back"],
       tecnologies:[<SiReact/>,<SiMongodb/>,<SiExpress/>]
     },{
@@ -65,8 +65,8 @@ export const projects = [
         image:Drivent,
         title: "Drivent | Software Gerenciador de Eventos",
         description:"Aplicação de compra de bilhetes para o cinema, um projeto Front-End, implementei funcionalidades de inscrição e login, operações básicas do CRUD (Criar, Ler, Atualizar e Excluir) para que o usuário possa gerenciar a entrada e saída de dinheiro  de forma fácil e eficiente, além de implementar arquitetura em camadas na construção da api.",
-        deploy:"http://projeto9-cineflex-ruby-two.vercel.app/",
-        repo:["https://github.com/RaphaelBragaa/projeto9-cineflex"],
+        deploy:"https://github.com/projetao-drivent/drivent-front",
+        repo:["https://github.com/projetao-drivent/drivent-front"],
         tecnologies:[<SiReact/>, <SiExpress/>, <SiTypescript/>, <SiPostgresql/>, <SiPrisma/>]
       },
      ]

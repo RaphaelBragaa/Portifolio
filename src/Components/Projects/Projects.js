@@ -5,66 +5,67 @@ import { ImEarth } from "react-icons/im";
 import { BsGithub } from "react-icons/bs";
 
 export default function Projects({ projects }) {
-const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
 
 
-const handleImageClick = (index) => {
-  setSelectedImage({ image: projects[index].image,
-                     title: projects[index].title, 
-                     description: projects[index].description, 
-                     tecnologies: projects[index].tecnologies, 
-                     deploy: projects[index].deploy,
-                     repo:[projects[index].repo]
-                    });
-};
+  const handleImageClick = (index) => {
+    setSelectedImage({
+      image: projects[index].image,
+      title: projects[index].title,
+      description: projects[index].description,
+      tecnologies: projects[index].tecnologies,
+      deploy: projects[index].deploy,
+      repo: [projects[index].repo]
+    });
+  };
 
 
-const closeModal = () => {
-setSelectedImage(null);
-};
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
 
-return (
+  return (
     <>
-    <Title data-aos="fade-up" id="projetos">Projetos</Title>
-        <GalleryContainer>
-            {projects.map((project, index) => (
-            <ImageContainer data-aos="zoom-in" key={index} onClick={() => handleImageClick(index)}> 
+      <Title data-aos="fade-up" id="projetos">Projetos</Title>
+      <GalleryContainer>
+        {projects.map((project, index) => (
+          <ImageContainer data-aos="zoom-in" key={index} onClick={() => handleImageClick(index)}>
             <img src={project.image} />
-            </ImageContainer>
-            ))}
-        </GalleryContainer>
-        {selectedImage !== null && (
+          </ImageContainer>
+        ))}
+      </GalleryContainer>
+      {selectedImage !== null && (
         <ModalContainer onClick={closeModal}>
-        <div className="modal-content">
-        <div className="left-side">
-         <h2>{selectedImage.title}</h2>
-         <br/>
-        <p>{selectedImage.description}</p>
-        <h3>Tecnologias</h3>
-        <span style={{ fontSize: '3rem'}}>
-            {selectedImage.tecnologies}
-          </span>
-        <h3>Links</h3>
-        <span style={{width:'20%'}}>
-        <a href={selectedImage.deploy} target="_blank">
-          <ImEarth fontSize={'2.5rem'}  color={'#FFFFFF'} />
-        </a>
-        <a href={selectedImage.repo[0]} target="_blank">
-          <BsGithub fontSize={'2.5rem'} color={'#FFFFFF'} />
-        </a>
-            
-        </span>
-        </div>
-        <div className="right-side">
-        <img src={selectedImage.image} />
-  
-        </div>
-        </div>
+          <div className="modal-content">
+            <div className="left-side">
+              <h2>{selectedImage.title}</h2>
+              <br />
+              <p>{selectedImage.description}</p>
+              <h3>Tecnologias</h3>
+              <span style={{ fontSize: '2rem', width: '100%' }}>
+                {selectedImage.tecnologies}
+              </span>
+              <h3>Links</h3>
+              <span style={{ width: '4%' }}>
+                <a href={selectedImage.deploy} target="_blank">
+                  <ImEarth fontSize={'2rem'} color={'#FFFFFF'} />
+                </a>
+                <a href={selectedImage.repo[0]} target="_blank">
+                  <BsGithub fontSize={'2rem'} color={'#FFFFFF'} />
+                </a>
+
+              </span>
+            </div>
+            <div className="right-side">
+              <img src={selectedImage.image} />
+
+            </div>
+          </div>
         </ModalContainer>
-        )}
+      )}
     </>
-);
+  );
 };
 
 const Title = styled.h1`
@@ -93,7 +94,7 @@ const GalleryContainer = styled.div`
 
  }
 `
- 
+
 
 const ImageContainer = styled.div`
 width: 30%;

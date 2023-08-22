@@ -18,9 +18,9 @@ export default function Contact(){
         <ContactBox>
         <img src={rafa}/>
         <div className="Contacts">
-         <a href="https://www.linkedin.com/in/raphael-bragaa/" target="_blank"><BsLinkedin fontSize={'3rem'} color={'#FF4495'} /></a>
-         <a href="https://github.com/RaphaelBragaa" target="_blank"><BsGithub fontSize={'3rem'} color={'#FF4495'}/></a>
-         <a href="https://wa.me/5579999438484" target="_blank"><BsWhatsapp fontSize={'3rem'} color={'#FF4495'}/></a>
+         <a href="https://www.linkedin.com/in/raphael-bragaa/" target="_blank"><BsLinkedin fontSize={'2.5rem'} color={'#FF4495'} /></a>
+         <a href="https://github.com/RaphaelBragaa" target="_blank"><BsGithub fontSize={'2.5rem'} color={'#FF4495'}/></a>
+         <a href="https://wa.me/5579999438484" target="_blank"><BsWhatsapp fontSize={'2.5rem'} color={'#FF4495'}/></a>
         </div>
         <div className="Email">
             <h2>rbragamouraa@gmail.com</h2>
